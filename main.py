@@ -97,10 +97,10 @@ class App:
     
     def GetCombolist(self):
         try:
-            if path.exists('combo.txt'):
-                option = input(f'{Fore.LIGHTWHITE_EX}[+] Combolist detected ({Fore.LIGHTBLUE_EX}combo.txt{Fore.LIGHTWHITE_EX})\n[+] Do you want to use this file or select another one?\n[y/n] > ')
+            if path.exists('/storage/emulated/0/Checkers/CrunchyrollAccountChecker/recursos/accounts.txt'):
+                option = input(f'{Fore.LIGHTWHITE_EX}[+] Combolist detected ({Fore.LIGHTBLUE_EX}/storage/emulated/0/Checkers/CrunchyrollAccountChecker/recursos/accounts.txt{Fore.LIGHTWHITE_EX})\n[+] Do you want to use this file or select another one?\n[y/n] > ')
                 if option == 'n':
-                    with open('combo.txt') as file:
+                    with open('/storage/emulated/0/Checkers/CrunchyrollAccountChecker/recursos/accounts.txt') as file:
                         for i in file:
                             self.combo.append(i.split('\n')[0])
                             self.combo_count += 1
